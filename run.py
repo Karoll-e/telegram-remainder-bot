@@ -19,7 +19,7 @@ elif config.ENV == "PROD":
     @app.route("/")
     def webhook():
         bot.remove_webhook()
-        bot.set_webhook(url=config.webhook+config.telegram_key)
+        bot.set_webhook(url=config.webhook+os.environ.get("TELEGRAM_KEY"))
         return 'Chat with the Bot  <a href ="https://t.me/DutiesRemainderBot">here</a> \
           or   Check the project code <a href ="https://github.com/Karoll-e/telegram-remainder-bot">here</a>', 200
 
