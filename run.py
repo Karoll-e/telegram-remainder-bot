@@ -27,5 +27,5 @@ elif config.ENV == "PROD":
         print("---", datetime.datetime.now().strftime("%H:%M"), "---")
         #if datetime.datetime.now().strftime("%H:%M") in ["05:00","05:01","06:00","06:01","07:00","07:01"]:
         threading.Thread(target=scheduler).start()
-        app.run(host=config.host, port=config.port)
+        app.run(host=config.host, port=os.environ.get("PORT"))
 
