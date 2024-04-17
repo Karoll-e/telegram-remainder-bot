@@ -20,8 +20,8 @@ elif config.ENV == "PROD":
     def webhook():
         bot.remove_webhook()
         bot.set_webhook(url=config.webhook+config.telegram_key)
-        return 'Chat with the Bot  <a href ="https://t.me/DatesReminderBot">here</a> \
-          or   Check the project code <a href ="https://github.com/mdipietro09/Bot_TelegramDatesReminder">here</a>', 200
+        return 'Chat with the Bot  <a href ="https://t.me/DutiesRemainderBot">here</a> \
+          or   Check the project code <a href ="https://github.com/Karoll-e/telegram-remainder-bot">here</a>', 200
 
     if __name__ == "__main__":
         print("---", datetime.datetime.now().strftime("%H:%M"), "---")

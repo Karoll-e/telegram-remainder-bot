@@ -9,8 +9,6 @@ if ENV == "DEV":
     telegram_key = os.environ.get("TELEGRAM_KEY")
     mongodb_key = os.environ.get("DATABASE_PASSWORD")
 elif ENV == "PROD":
-    import ast
-
     telegram_key = os.environ.get("TELEGRAM_KEY")
     mongodb_key = os.environ.get("DATABASE_PASSWORD")
 
@@ -18,7 +16,7 @@ elif ENV == "PROD":
 ## server
 host = "0.0.0.0"
 port = int(os.environ.get("PORT", 5000))
-webhook = "https://telegram-remainder-bot.onrender.com"
+webhook = "https://telegram-remainder-bot.onrender.com/"
 
 
 ## fs
